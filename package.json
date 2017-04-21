@@ -1,0 +1,23 @@
+{
+  "name": "friend-finder",
+  "version": "0.1.0",
+  "description": "Matches user with closest friend match.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingKaiser/FriendFinder.git"
+  },
+  "keywords": [
+    "finder"
+  ],
+  "author": "Falko Julian Noe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodingKaiser/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/CodingKaiser/FriendFinder#readme"
+}
