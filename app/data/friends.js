@@ -14,12 +14,14 @@ class FriendsDb {
   getClosestMatch(stranger) {
     var bestFriend = this.getFriends()[0];
     var bestScore = Number.MAX_VALUE;
-    for (potentialFriend of this.getFriends()) {
+    for (let potentialFriend of this.getFriends()) {
       var sumOfDiff = 0;
-      for (var i = 0; i < stranger.scores; i++) {
+      for (var i = 0; i < stranger.scores.length; i++) {
         sumOfDiff += Math.abs(stranger.scores[i] - potentialFriend.scores[i]);
       }
-      if (sumOfDiff < bestScore) {
+      if (sumOfDiff < bestScore &&
+          potentialFriend.name !== stranger.name &&
+          potentialFriend.photo !== stranger.photo) {
         bestFriend = potentialFriend;
         bestScore = sumOfDiff;
       }

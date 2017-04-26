@@ -11,7 +11,7 @@ function loadApiRoutes(app, friends) {
     var newFriend = req.body;
     if (isValidFriend(newFriend, 10)) {
       friends.add(newFriend);
-      return res.json(newFriend);
+      return res.json(friends.getClosestMatch(newFriend));
     }
     return res.json({error: "Object did not have correct values or number of keys"})
   });
