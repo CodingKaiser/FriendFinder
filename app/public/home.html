@@ -11,28 +11,55 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<style>
+		html {
+			height: 100%; /*ADDED FOR STICKY FOOTER*/
+		}
+
+		body {
+			height: 100%; /*ADDED FOR STICKY FOOTER*/
+		}
+
+		#main-content-wrapper {
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			margin: 0px;
+			padding: 0px;
+			min-height: 100%; /*ADDED FOR STICKY FOOTER*/
+			height: auto; /*ADDED FOR STICKY FOOTER*/
+			margin: 0 auto -90px; /*ADDED FOR STICKY FOOTER*/
+		}
+
+		#push { /*ADDED FOR STICKY FOOTER */
+			height: 150px;
+		}
+	</style>
 
 </head>
 <body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1 class=""><i class="fa fa-heartbeat" aria-hidden="true"></i> Friend Finder</h1>
-			<hr>
-			<h2 class="">Answer a few basic questions. </h2>
-			<h2 class="">Then find the "friend" with the greatest compatibility!</h2>
-			<br>
+	<div id="main-content-wrapper">
+		<div class="container">
+			<div class="jumbotron">
+				<h1 class=""><i class="fa fa-heartbeat" aria-hidden="true"></i> Friend Finder</h1>
+				<hr>
+				<h2 class="">Answer a few basic questions. </h2>
+				<h2 class="">Then find the "friend" with the greatest compatibility!</h2>
+				<br>
 
-			<div class="">
-				<a href="/survey"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-scissors"></span> Go to Survey</h4></button></a>
+				<div class="">
+					<a href="/survey"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-scissors"></span> Go to Survey</h4></button></a>
+				</div>
 			</div>
-		</div>
 
-	    <footer class="footer">
-	      <div class="container">
-		        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/CodingKaiser/FriendFinder">GitHub Repo</a></p>
-	      </div>
-	    </footer>
+		</div>
+		<div id="push"></div>
 	</div>
+	<footer class="footer">
+		<div class="container">
+				<p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/CodingKaiser/FriendFinder">GitHub Repo</a></p>
+		</div>
+	</footer>
 </body>
 
 </html>
