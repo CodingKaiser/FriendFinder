@@ -5,7 +5,7 @@ var loadApiRoutes = require("./app/routing/apiRoutes.js");
 var friendDb = new (require("./app/data/friends.js"));
 
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
